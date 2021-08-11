@@ -9,7 +9,7 @@ public class Pessoas {
 	private String email;
 	private String endereco;
 
-	//Construtor
+	//Construtor opcional pra ser chamado nas classes filhas
 	public Pessoas() {
 		super();
 	}
@@ -23,6 +23,13 @@ public class Pessoas {
 		this.endereco = endereco;
 		this.id = id;
 	}
+	public Pessoas(String nome, String telefone, String endereco) {
+		super();
+		this.nome = nome;
+		this.telefone = telefone;
+		this.endereco = endereco;
+	}
+	
 
 	//get and set
 	
@@ -65,11 +72,4 @@ public class Pessoas {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-
-	//Metodo de carregar doação
-	//public void ddd(String no) {
-	//	String n = no;
-	//	doacoes doa = new doacoes(n);
-	//}
-	
 }

@@ -1,83 +1,37 @@
 package Classes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class doacoes {
 
-	private int id;
-	private int idPessoa;
-	private String tipoPessoa;
-	private String nome;
-	private double quantidade;
-	private String descricao;
-
+	private String doacaoEscolhida;
+	private int quantidade;
+	
 	public doacoes() {
-		super();
+		
 	}
-
-	public doacoes(int id, int idPessoa, String tipoPessoa, String nome, double quantidade, String descricao) {
-		super();
-		this.id = id;
-		this.idPessoa = idPessoa;
-		this.tipoPessoa = tipoPessoa;
-		this.nome = nome;
+	
+	public doacoes(String doacaoEscolhida, int quantidade) {
+		this.doacaoEscolhida = doacaoEscolhida;
 		this.quantidade = quantidade;
-		this.descricao = descricao;
 	}
 
-	public int getId() {
-		return id;
+	public String getDoacaoEscolhida() {
+		return doacaoEscolhida;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setDoacaoEscolhida(String doacaoEscolhida) {
+		this.doacaoEscolhida = doacaoEscolhida;
 	}
 
-	public int getIdPessoa() {
-		return idPessoa;
-	}
-
-	public void setIdPessoa(int idPessoa) {
-		this.idPessoa = idPessoa;
-	}
-
-	public String getTipoPessoa() {
-		return tipoPessoa;
-	}
-
-	public void setTipoPessoa(String tipoPessoa) {
-		this.tipoPessoa = tipoPessoa;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public double getQuantidade() {
+	public int getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(double quantidade) {
+	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
-	
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public List<doacoes> getDoacao(){
-		
-		
-		return null;
-		
+	public String toString() {
+		return "Vai doar: "+ this.doacaoEscolhida + ", quantidade a ser doada: "+ this.quantidade;
 	}
 }

@@ -9,6 +9,11 @@ public class Main {
 	//Main
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
+		doadorFisico doadorFisido = new doadorFisico();
+		doadorJuridico doadorJuridico = new doadorJuridico();
+		Cadastro novoCadastro = new Cadastro();
+		int tipoDePessoa;
+		
 		int esc;
 		boolean sair = false;
 		
@@ -24,7 +29,7 @@ public class Main {
 			System.out.print("Digite uma das opções: "); esc = leia.nextInt();
 			switch(esc) {
 				case 1:
-					cadastro();
+					Cadastro.novoCadastro();
 					sair = true;
 					break;
 				case 2:
@@ -35,6 +40,8 @@ public class Main {
 					System.out.println("Opção invalida.\n");
 			}
 		}
+		
+		
 	}
 	
 	//Metodo de cadastramento das Pessoas Fisicas e as Pessoas Juridicas.
@@ -54,7 +61,6 @@ public class Main {
 			System.out.print("Digite uma das opções: "); esc = leia.nextInt();
 			switch(esc) {
 				case 1:
-					doadorJuridico pj = new doadorJuridico();
 					int numero = randow.nextInt(1000);
 					pj.setId(numero);
 					System.out.println("\nPrimeiramente, digite para mim o nome ou razão social: ");
@@ -67,7 +73,7 @@ public class Main {
 					pj.setEmail(email = leia.next());
 					System.out.println("\nPara finalizarmos, agora digite para mim o endereço da empresa: ");
 					pj.setEndereco(endereco = leia.next());
-					doacaoPj(pj);
+					doadorJuridico.
 					sair = true;
 					break;
 				case 2:
@@ -94,7 +100,7 @@ public class Main {
 	}
 
 	//Metodo de doação Pessoa Juridica
-	private static void doacaoPj(doadorJuridico pj) {
+	/*private static void doacaoPj(doadorJuridico pj) {
 		int esc, idPessoa;
 		double quantidade;
 		String descricao;
@@ -197,10 +203,10 @@ public class Main {
 			}
 		}
 		System.out.println("\nObrigado Pela sua contribuição :)");
-	}
+	}*/
 
 	//Metodo de doação Pessoa Fisica
-	private static void doacaoPf(doadorFisico pf) {
+	/*private static void doacaoPf(doadorFisico pf) {
 		int esc, idPessoa;
 		double quantidade;
 		String descricao;
@@ -303,6 +309,6 @@ public class Main {
 			}
 		}
 		System.out.println("\nObrigado Pela sua contribuição :)");
-	}
+	}*/
 
 }
